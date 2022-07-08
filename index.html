@@ -1,0 +1,633 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/red-ram-01.jpeg">
+  <link rel="icon" href="/img/red-ram-01.jpeg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Lei.Zhang">
+  <meta name="keywords" content="程序员, 编程">
+  
+    <meta name="description" content="一个码农的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="三石说(一个程序员的博客)">
+<meta property="og:url" content="https://bitseatech.cn/index.html">
+<meta property="og:site_name" content="三石说(一个程序员的博客)">
+<meta property="og:description" content="一个码农的博客">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Lei.Zhang">
+<meta property="article:tag" content="程序员, 编程">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>三石说(一个程序员的博客)</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"bitseatech.cn","root":"/","version":"1.9.2","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"2a9835983c4c33575e95bce7565aa890","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+    <!-- Baidu Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?2a9835983c4c33575e95bce7565aa890";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>三石说(一个程序员的博客)</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                Links
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/bg.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">欢迎 welcome</span>
+          
+        </div>
+
+        
+      </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/20220708_CI_CD%E6%88%90%E7%86%9F%E5%BA%A6/" target="_self">
+          CI/CD成熟度
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/20220708_CI_CD%E6%88%90%E7%86%9F%E5%BA%A6/" target="_self">
+        <div>
+          云原生吹水Ep.2 来聊聊：你觉得现在所在的 team CI&#x2F;CD 建设的怎么样？欢迎大家用表情投票 1⃣️ 烂的一批，我要吐槽 2⃣️ 够用，还有很大的提升空间 3⃣️ 还行，没有多少地方能提升的了 4⃣️ 优秀，我要怒赞 为了评估我们的CI&#x2F;CD (Continuous Integration&#x2F;Continuous Delivery&#x2F;Continuous
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-07-08 15:52" pubdate>
+              2022-07-08
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/">#云原生</a>
+            
+              <a href="/tags/%E5%86%85%E9%83%A8%E5%88%86%E4%BA%AB/">#内部分享</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/20220702_%E4%BA%91%E6%9C%8D%E5%8A%A1%E6%88%90%E6%9C%AC%E6%B2%BB%E7%90%86%E6%88%90%E7%86%9F%E5%BA%A6/" target="_self">
+          云服务成本治理成熟度
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/20220702_%E4%BA%91%E6%9C%8D%E5%8A%A1%E6%88%90%E6%9C%AC%E6%B2%BB%E7%90%86%E6%88%90%E7%86%9F%E5%BA%A6/" target="_self">
+        <div>
+          昨天和王凯huddle他提到现在这个时候团队都想着怎么省钱减少IT支出既然应征了频主，应景拉一个话题 EP1：云服务怎么用更省钱？在抛我的观点之前先统计一下大家对成本的感觉，可以用reaction投票:one: 成本是老板的事，从不关心成本就是干:two: IT成本是运维的事，不应该开发关注:three: 会有一些考虑但不经常关心，coding没多少和成本相关的东西:four: 穷人思维（抠逼）驱
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-07-02 11:19" pubdate>
+              2022-07-02
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/">#云原生</a>
+            
+              <a href="/tags/%E5%86%85%E9%83%A8%E5%88%86%E4%BA%AB/">#内部分享</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/20211225_%E5%81%9A%E4%B8%AA%E4%B8%8D%E8%AE%B2%E7%90%86%E7%9A%84%E4%BA%BA/" target="_self">
+          做个不讲理的人
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/20211225_%E5%81%9A%E4%B8%AA%E4%B8%8D%E8%AE%B2%E7%90%86%E7%9A%84%E4%BA%BA/" target="_self">
+        <div>
+          首先澄清一下笔者所说的“不讲理”不是对人对事遇到冲突不讲道理、胡搅蛮缠，而是不要好为人师、以己度人，给别人讲大道理 笔者之前好为人师，喜欢给别人讲你应该这样，你为什么不这样。后来认识到每个人都有自己的认知局限，不吃他人苦 勿劝他人善。 后来喜欢给别人刨析原因，为什么你有这样的想法，为什么你有这样的行为，用各种学科的理论解释发生在周遭的事情。 以上的行为经常发生在亲密关系上包括父母、女友、朋友，后来
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-12-25 19:10" pubdate>
+              2021-12-25
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/">#生活感悟</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/20211225_%E7%86%9F%E4%BA%BA%E7%A4%BE%E4%BC%9A%E4%B8%8E%E9%99%8C%E7%94%9F%E4%BA%BA%E7%A4%BE%E4%BC%9A/" target="_self">
+          熟人社会与陌生人社会
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/20211225_%E7%86%9F%E4%BA%BA%E7%A4%BE%E4%BC%9A%E4%B8%8E%E9%99%8C%E7%94%9F%E4%BA%BA%E7%A4%BE%E4%BC%9A/" target="_self">
+        <div>
+          你一定碰到过办事情喜欢找熟人的人，或者你就是这样的人。与之相对的是喜欢用钱解决事情，尊崇契约精神。 两种做事方式远不是个人喜好这么简单，笔者认为有更深远的历史背景。 本文的观点受王德峰《中西方文化的渊源》启发。 中国广袤的土地上长久以来是乡约宗族自制社会，所谓皇权不下县，熟人之间有信义做担保断然不会互相坑骗，如果甲坑了乙，那么甲在整个宗族的社会信用就会丧失。但这样的结构很难支撑长距离的交易，一个北
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-12-25 19:10" pubdate>
+              2021-12-25
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/">#生活感悟</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/20211222_%E6%88%91%E7%9A%84IT%E4%BB%8E%E4%B8%9A%E7%BB%8F%E5%8E%86/" target="_self">
+          我的IT从业经历
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/20211222_%E6%88%91%E7%9A%84IT%E4%BB%8E%E4%B8%9A%E7%BB%8F%E5%8E%86/" target="_self">
+        <div>
+          曾经计划过要把自己的经历写下来，不为别的，是真的怕自己忘了，当某一天猛地发现自己这半生是怎么过来的都朦胧了，那会是一种怎样的无措感。哲人说过：能够看到多远的历史就能够看到多远的未来。 初心因为喜欢玩游戏想开发自己的游戏走进软件开发行业。 几乎每个男孩子都会喜欢玩电子游戏吧，从掌机到红白机，紧接着网吧时代的单机游戏到网络游戏。因为不满足于租别人设备玩，小学初中时期攒钱买了游戏学习机，到高中家里赞助买
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-12-22 13:57" pubdate>
+              2021-12-22
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%81%8C%E5%9C%BA/" class="category-chain-item">职场</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E8%81%8C%E5%9C%BA/">#职场</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/20211221_35%E5%B2%81%E7%A8%8B%E5%BA%8F%E5%91%98%E6%80%8E%E4%B9%88%E5%8A%9E/" target="_self">
+          35岁程序员怎么办
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/20211221_35%E5%B2%81%E7%A8%8B%E5%BA%8F%E5%91%98%E6%80%8E%E4%B9%88%E5%8A%9E/" target="_self">
+        <div>
+          众所周知在国内35岁是程序员的一道坎。 笔者没有35岁刚刚30岁，如果35岁再来思考这个问题肯定已经晚了，那么对还没有35岁的人正确的问题应该:怎么做才能迈过35岁这道坎? 35岁的程序员都去做了什么?   转行  创业  做到了高管，更高级的打工人 高级程序员 ,更垂直更专业的领域，比如数据库开发，SAP开发 软件外包，个体户 移民、出海 …  对于一个持续学习，对新技术抱有热情，愿意敲代码，没
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-12-21 16:15" pubdate>
+              2021-12-21
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/">#程序员</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>
