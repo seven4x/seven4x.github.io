@@ -23,12 +23,14 @@
 <meta property="og:site_name" content="三石说(一个程序员的博客)">
 <meta property="og:description" content="Dapr的出现是云平台市场竞争的结果AWS在公有云领域入日中天，Google又有云原生战略三驾马车：k8s,istio,gRPC, 当初Azure作为挑战者想要打开市场他能怎么做？ 可以看下面这个图，2018年微软的人自然想到了往应用层发展：构想一个与平台无关的应用程序模型,使开发人员能独立于特定平台设计出分布式应用程序的拓扑。详细背景故事可以看这本Dapr作者出的书。 同样作为挑战者的阿里云也是">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://bitseatech.cn/img/dapr.png">
 <meta property="article:published_time" content="2022-07-22T07:52:00.000Z">
-<meta property="article:modified_time" content="2022-07-22T07:14:48.794Z">
+<meta property="article:modified_time" content="2022-07-22T07:17:27.560Z">
 <meta property="article:author" content="Lei.Zhang">
 <meta property="article:tag" content="云原生">
 <meta property="article:tag" content="内部分享">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bitseatech.cn/img/dapr.png">
   
   
   
@@ -265,7 +267,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          1.4k 字
+          1.3k 字
         
       </span>
     
@@ -331,7 +333,7 @@
                 <h1 id="Dapr的出现是云平台市场竞争的结果"><a href="#Dapr的出现是云平台市场竞争的结果" class="headerlink" title="Dapr的出现是云平台市场竞争的结果"></a>Dapr的出现是云平台市场竞争的结果</h1><p>AWS在公有云领域入日中天，Google又有云原生战略三驾马车：k8s,istio,gRPC, 当初Azure作为挑战者想要打开市场他能怎么做？</p>
 <p>可以看下面这个图，2018年微软的人自然想到了往应用层发展：构想一个与平台无关的应用程序模型,使开发人员能独立于特定平台设计出分布式应用程序的拓扑。详细背景故事可以看这本<a target="_blank" rel="noopener" href="https://skyao.io/publication/202111-learning-dapr/#:~:text=%E3%80%82%E5%BD%93%E6%97%B6%EF%BC%8C%E6%88%91%E4%BB%AC%E6%AD%A3%E5%9C%A8%E6%9E%84%E6%83%B3%E4%B8%80%E4%B8%AA%E4%B8%8E%E5%B9%B3%E5%8F%B0%E6%97%A0%E5%85%B3%E7%9A%84%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%9E%8B%EF%BC%8C%E4%BD%BF%E5%BC%80%E5%8F%91%E4%BA%BA%E5%91%98%E8%83%BD%E7%8B%AC%E7%AB%8B%E4%BA%8E%E7%89%B9%E5%AE%9A%E5%B9%B3%E5%8F%B0%E8%AE%BE%E8%AE%A1%E5%87%BA%E5%88%86%E5%B8%83%E5%BC%8F%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%8B%93%E6%89%91">Dapr作者出的书</a>。</p>
 <p>同样作为挑战者的阿里云也是项目主要参与者</p>
-<p>![dapr](&#x2F;Users&#x2F;lei.zhang&#x2F;obsidian-repo&#x2F;note-learn&#x2F;7.cloud native&#x2F;img&#x2F;dapr.png)</p>
+<p><img src="/./img/dapr.png" srcset="/img/loading.gif" lazyload alt="dapr"></p>
 <h1 id="Dapr-带来的改变一瞥"><a href="#Dapr-带来的改变一瞥" class="headerlink" title="Dapr 带来的改变一瞥"></a>Dapr 带来的改变一瞥</h1><p>三大基础软件领域：操作系统，中间件，数据库。操作系统被容器抽象掉了，目前我们使用中间件的时候还得配合着client-sdk。</p>
 <p>以存储一个key-value为例，开发仅仅是想保存个值而已，换一种存储或换一种开发语言，开发都得重新熟悉对应语言的的client sdk API.</p>
 <p>例如：开始以redis存储，之后换成dynamodb存储，开发得重新熟悉dynamodb的client sdk.</p>
