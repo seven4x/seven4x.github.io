@@ -9,8 +9,34 @@
     <atom:link href="https://bitseatech.cn/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>一个码农的博客</description>
-    <pubDate>Fri, 15 Jul 2022 08:47:54 GMT</pubDate>
+    <pubDate>Fri, 22 Jul 2022 07:14:48 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Dapr能否改变云原生时代使用中间件的方式？</title>
+      <link>https://bitseatech.cn/20220722_Dapr%E8%83%BD%E5%90%A6%E6%94%B9%E5%8F%98%E4%BA%91%E5%8E%9F%E7%94%9F%E6%97%B6%E4%BB%A3%E4%BD%BF%E7%94%A8%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E6%96%B9%E5%BC%8F/</link>
+      <guid>https://bitseatech.cn/20220722_Dapr%E8%83%BD%E5%90%A6%E6%94%B9%E5%8F%98%E4%BA%91%E5%8E%9F%E7%94%9F%E6%97%B6%E4%BB%A3%E4%BD%BF%E7%94%A8%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E6%96%B9%E5%BC%8F/</guid>
+      <pubDate>Fri, 22 Jul 2022 07:52:00 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h1 id=&quot;Dapr的出现是云平台市场竞争的结果&quot;&gt;&lt;a href=&quot;#Dapr的出现是云平台市场竞争的结果&quot; class=&quot;headerlink&quot; title=&quot;Dapr的出现是云平台市场竞争的结果&quot;&gt;&lt;/a&gt;Dapr的出现是云平台市场竞争的结果&lt;/h1&gt;&lt;p&gt;AWS在公有</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h1 id="Dapr的出现是云平台市场竞争的结果"><a href="#Dapr的出现是云平台市场竞争的结果" class="headerlink" title="Dapr的出现是云平台市场竞争的结果"></a>Dapr的出现是云平台市场竞争的结果</h1><p>AWS在公有云领域入日中天，Google又有云原生战略三驾马车：k8s,istio,gRPC, 当初Azure作为挑战者想要打开市场他能怎么做？</p><p>可以看下面这个图，2018年微软的人自然想到了往应用层发展：构想一个与平台无关的应用程序模型,使开发人员能独立于特定平台设计出分布式应用程序的拓扑。详细背景故事可以看这本<a href="https://skyao.io/publication/202111-learning-dapr/#:~:text=%E3%80%82%E5%BD%93%E6%97%B6%EF%BC%8C%E6%88%91%E4%BB%AC%E6%AD%A3%E5%9C%A8%E6%9E%84%E6%83%B3%E4%B8%80%E4%B8%AA%E4%B8%8E%E5%B9%B3%E5%8F%B0%E6%97%A0%E5%85%B3%E7%9A%84%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%A8%A1%E5%9E%8B%EF%BC%8C%E4%BD%BF%E5%BC%80%E5%8F%91%E4%BA%BA%E5%91%98%E8%83%BD%E7%8B%AC%E7%AB%8B%E4%BA%8E%E7%89%B9%E5%AE%9A%E5%B9%B3%E5%8F%B0%E8%AE%BE%E8%AE%A1%E5%87%BA%E5%88%86%E5%B8%83%E5%BC%8F%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%8B%93%E6%89%91">Dapr作者出的书</a>。</p><p>同样作为挑战者的阿里云也是项目主要参与者</p><p>![dapr](&#x2F;Users&#x2F;lei.zhang&#x2F;obsidian-repo&#x2F;note-learn&#x2F;7.cloud native&#x2F;img&#x2F;dapr.png)</p><h1 id="Dapr-带来的改变一瞥"><a href="#Dapr-带来的改变一瞥" class="headerlink" title="Dapr 带来的改变一瞥"></a>Dapr 带来的改变一瞥</h1><p>三大基础软件领域：操作系统，中间件，数据库。操作系统被容器抽象掉了，目前我们使用中间件的时候还得配合着client-sdk。</p><p>以存储一个key-value为例，开发仅仅是想保存个值而已，换一种存储或换一种开发语言，开发都得重新熟悉对应语言的的client sdk API.</p><p>例如：开始以redis存储，之后换成dynamodb存储，开发得重新熟悉dynamodb的client sdk.</p><p>又例如原来一部分是java开发另一部分用python开发,仍然保持使用redis存储，开发人员得同时熟悉两门语言的redis client-sdk使用。</p><p>现在有了Dapr就不必了，它在中间做了一层API抽象叫 <a href="https://docs.dapr.io/reference/components-reference/supported-state-stores/">State stores</a>,这样你就不必关系存储时候是redis,mysql还是其他了，应用程序存储的时候只需要向Dapr的sidebar pod发送一个HTTP或者gRPC请求，例如</p><figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs pf">curl -X POST -H <span class="hljs-string">&quot;Content-Type: application/json&quot;</span> -d &#x27;[&#123; <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-string">&quot;name&quot;</span>, <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-string">&quot;Bruce Wayne&quot;</span>&#125;]&#x27; http://localhost:<span class="hljs-number">3500</span>/v1.<span class="hljs-number">0</span>/<span class="hljs-keyword">state</span>/<span class="hljs-keyword">state</span>StoreName<br><span class="hljs-comment"># 向stateStoreName中存储一个kv， 3500是Dapr的sidebar HTTP协议监听端口，/v1.0/state/是固定的协议路径</span><br></code></pre></td></tr></table></figure><p>类似state stores的这些能力Dapr中称为<a href="https://docs.dapr.io/developing-applications/building-blocks/">Building blocks</a>，有点对应12-Factor中的<a href="https://docs.microsoft.com/en-us/dotnet/architecture/cloud-native/definition#backing-services">backing-services</a>的感觉</p><p>总之Dapr(Distributed Application Runtime)降低了开发分布式系统应用程序的难度。</p><h1 id="关注点分离导致分工是不变的趋势"><a href="#关注点分离导致分工是不变的趋势" class="headerlink" title="关注点分离导致分工是不变的趋势"></a>关注点分离导致分工是不变的趋势</h1><p>起初大家都是程序员前面没有那么多title的，现在有了前端程序员，后端程序员，有搞操作系统的，有搞内核的，有搞编译器的，有搞虚拟机的。web领域的开发现在也有了进一步分离的趋势，云原生程序员与普通程序员。云原生程序员生产工具搞定背后的复杂性hold住所有非功能性需求。普通程序员不需要了解底层的复杂性只需要懂if else CRUD就OK了。</p><p>这种趋势对企业发展来说可能是好事情，假设以前需要雇佣2个高级程序员一共20块钱，现在只需要花5块钱雇佣一个初级程序员另外花10块钱到云厂商或自建的云平台。</p><p>但是马哲讲过，分工会提高效率但也是会导致人的异化。估计以后就再也没有人能full stack了</p>]]></content:encoded>
+      
+      
+      
+      <category domain="https://bitseatech.cn/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/">云原生</category>
+      
+      <category domain="https://bitseatech.cn/tags/%E5%86%85%E9%83%A8%E5%88%86%E4%BA%AB/">内部分享</category>
+      
+      
+      <comments>https://bitseatech.cn/20220722_Dapr%E8%83%BD%E5%90%A6%E6%94%B9%E5%8F%98%E4%BA%91%E5%8E%9F%E7%94%9F%E6%97%B6%E4%BB%A3%E4%BD%BF%E7%94%A8%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E6%96%B9%E5%BC%8F/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>可观测性标准化历史</title>
